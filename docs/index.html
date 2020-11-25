@@ -115,6 +115,16 @@
       <h2>Terminology</h2>
 
       <section>
+        <h3>Verifiable Credential</h3>
+        <p>See [[vc-data-model]].</p>
+      </section>
+
+      <section>
+        <h3>Verifiable Presentation</h3>
+        <p>See [[vc-data-model]].</p>
+      </section>
+
+      <section>
         <h3>
           <dfn data-lt="Authorization Capability|AuthorizationCapability"
             >Authorization Capability</dfn
@@ -127,9 +137,8 @@
       </section>
       <section>
         <h3>
-          <dfn
-            data-lt="Authorization Capability Invocation|AuthorizationCapabilityInvocation"
-            >Authorization Capability Invocation</dfn
+          <dfn data-lt="Capability Invocation|CapabilityInvocation"
+            >Capability Invocation</dfn
           >
         </h3>
         <p>
@@ -265,9 +274,8 @@
         <h3>Invoking</h3>
         <p>
           An authorization capability is invoked by presenting an
-          <a>AuthorizationCapabilityInvocation</a> verifiable presentation
-          containing one or more <a>AuthorizationCapability</a> Verifiable
-          Credentials.
+          <a>CapabilityInvocation</a> verifiable presentation containing one or
+          more <a>AuthorizationCapability</a> Verifiable Credentials.
         </p>
 
         <pre class="example">
@@ -278,7 +286,7 @@
               ],
               "type": [
                 "VerifiablePresentation",
-                "AuthorizationCapabilityInvocation"
+                "CapabilityInvocation"
               ],
               "verifiableCredential": [
                 {
