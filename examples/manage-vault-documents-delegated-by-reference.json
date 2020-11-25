@@ -1,0 +1,54 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/v2"
+  ],
+  "id": "http://example.com/zcaps/1",
+  "type": [
+    "VerifiableCredential",
+    "AuthorizationCapability"
+  ],
+  "issuer": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
+  "issuanceDate": "2020-03-10T04:24:12.164Z",
+  "name": "Read Vault Documents",
+  "description": "This capability grants a subject the ability to read documents in a confidential datastore.",
+  "credentialSubject": [
+    {
+      "id": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39",
+      "authorization": [
+        {
+          "capability": "http://example.com/zcaps/0",
+          "caveat": [
+            {
+              "actions": [
+                "https://w3id.org/security#vault.document.create"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "did:key:zACHe1V5EMhFZ9EsvPboK7ySLBLJuUNW53vvDNe3iMhH25iYZvXpVm6Hm7rpnr7dkduDh6iRXhNUNwhdD9SX9NsPK4UpHBTdbyZ5djv965ZS6WXfVDPwwAcc2sYGt2YKFpwdsGWs",
+      "authorization": [
+        {
+          "capability": "http://example.com/zcaps/0",
+          "caveat": [
+            {
+              "actions": [
+                "https://w3id.org/security#vault.document.read"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "created": "2020-03-10T04:24:12.164Z",
+    "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..cR3CBD3XXapPXlYRnrjY7jM2ulfWyi9ZZmctJ0tKPbQNJPm8IuDoPnLrIA5CEg_10bKsJgbaKqTR5kUMXgGR_Fv6G3NhROXCscTSs4QnQEMsviJD_lTOIVEWeae9HEu0",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
+  }
+}

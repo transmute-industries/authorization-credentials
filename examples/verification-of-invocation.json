@@ -1,0 +1,77 @@
+{
+  "presentationResult": {
+    "verified": true,
+    "results": [
+      {
+        "proof": {
+          "@context": "https://w3id.org/security/v2",
+          "type": "sec:JsonWebSignature2020",
+          "created": "2020-03-10T04:24:12.164Z",
+          "challenge": "123",
+          "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..OoFQqXA9yoQDaCiiDHma9e8WVnmiggxIfAICa0wxDtiMMXYIbWRXMOP50C_Sg-faVrITefXBv16Bxima-5smuHNwgCX_9LofLOj3QRCDYsZwNavp77m8Yjj8zkSMeif-",
+          "proofPurpose": "authentication",
+          "verificationMethod": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39#zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39"
+        },
+        "verified": true,
+        "purposeResult": {
+          "valid": true,
+          "controller": {
+            "id": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39",
+            "assertionMethod": [
+              "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39#zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39"
+            ],
+            "authentication": [
+              "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39#zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39"
+            ],
+            "capabilityDelegation": [
+              "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39#zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39"
+            ],
+            "capabilityInvocation": [
+              "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39#zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39"
+            ],
+            "keyAgreement": [
+              "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39#zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39"
+            ],
+            "verificationMethod": {
+              "id": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39#zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39",
+              "type": "did:/JsonWebKey2020",
+              "controller": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39",
+              "sec:publicKeyJwk": {
+                "type": "@json",
+                "@value": {
+                  "kty": "EC",
+                  "crv": "P-384",
+                  "x": "YwfTDLYfaZPfV4BZep4ItGzYyhLdsmS-teP5znbsySHFi6JsTIfAE6O0utDR_q1w",
+                  "y": "N_cz5eKR0JMtCX1vyidHYGW9PaWTGYy6GRm_kbBj95vGtCldwcrCaVmfz8ZhVtIY"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "verified": true,
+  "credentialResults": [
+    {
+      "verified": true,
+      "results": [
+        {
+          "proof": {
+            "@context": "https://w3id.org/security/v2",
+            "type": "sec:JsonWebSignature2020",
+            "created": "2020-03-10T04:24:12.164Z",
+            "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..cR3CBD3XXapPXlYRnrjY7jM2ulfWyi9ZZmctJ0tKPbQNJPm8IuDoPnLrIA5CEg_10bKsJgbaKqTR5kUMXgGR_Fv6G3NhROXCscTSs4QnQEMsviJD_lTOIVEWeae9HEu0",
+            "proofPurpose": "assertionMethod",
+            "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
+          },
+          "verified": true,
+          "purposeResult": {
+            "valid": true
+          }
+        }
+      ],
+      "credentialId": "http://example.com/zcaps/1"
+    }
+  ]
+}

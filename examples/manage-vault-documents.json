@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/v2"
+  ],
+  "id": "http://example.com/zcaps/0",
+  "type": [
+    "VerifiableCredential",
+    "AuthorizationCapability"
+  ],
+  "issuer": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
+  "issuanceDate": "2020-03-10T04:24:12.164Z",
+  "name": "Manage Vault Documents",
+  "description": "This capability grants a subject the ability to manage documents in a confidential datastore.",
+  "credentialSubject": {
+    "id": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
+    "authorization": [
+      {
+        "type": "https://w3id.org/security#capabilityInvocation",
+        "locations": [
+          "https://example.com/edvs/123"
+        ],
+        "actions": [
+          "https://w3id.org/security#vault.document.create",
+          "https://w3id.org/security#vault.document.read",
+          "https://w3id.org/security#vault.document.update",
+          "https://w3id.org/security#vault.document.delete"
+        ]
+      }
+    ]
+  },
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "created": "2020-03-10T04:24:12.164Z",
+    "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..cjhgRppuFL8QePkFwA4IHWTHGK0lxOfms22rneJ4MiiJXB9U2pCxoW2y6tOsbGaCWyIaTBX1ISg-IdFjD0Ph_TYFk-jlW_MB1eIdpoO2LJ-aTiwgGWw0TO1DYUNd8PVb",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
+  }
+}
