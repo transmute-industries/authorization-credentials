@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Authorization Credentials v0.0</title>
+    <meta http-equiv=" Content-Type" content="text/html;charset=utf-8" />
+
+    <script
+      src="https://www.w3.org/Tools/respec/respec-w3c"
+      class="remove"
+    ></script>
+    <script type="text/javascript" class="remove">
+      const respecConfig = {
+        specStatus: "UNOFFICIAL",
+        shortName: "authorization-credentials",
+        previousPublishDate: "2020-09-30",
+        previousMaturity: "UNOFFICIAL",
+        edDraftURI:
+          "https://transmute-industries.github.io/authorization-credentials",
+        editors: [
+          {
+            name: "Orie Steele",
+            url: "https://github.com/OR13",
+            company: "Transmute",
+            companyURL: "https://www.transmute.industries/",
+          },
+        ],
+        otherLinks: [
+          {
+            key: "Source Control",
+            data: [
+              {
+                value:
+                  "https://github.com/transmute-industries/authorization-credentials",
+                href:
+                  "https://github.com/transmute-industries/authorization-credentials",
+              },
+            ],
+          },
+          {
+            key: "Issue Tracker",
+            data: [
+              {
+                value:
+                  "https://github.com/transmute-industries/authorization-credentials/issues",
+                href:
+                  "https://github.com/transmute-industries/authorization-credentials/issues",
+              },
+            ],
+          },
+        ],
+        maxTocLevel: 2,
+        localBiblio: {
+          "RDF-DATASET-NORMALIZATION": {
+            title: "RDF Dataset Normalization 1.0",
+            href: "http://json-ld.github.io/normalization/spec/",
+            authors: ["David Longley", "Manu Sporny"],
+            status: "CGDRAFT",
+            publisher: "JSON-LD Community Group",
+          },
+        },
+      };
+    </script>
+    <style>
+      table {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="abstract">
+      <p>
+        This specification describes an application of Verifiable Credentials
+        for use as Authorization Capabilities.
+      </p>
+    </section>
+
+    <section id="sotd">
+      <p>
+        This is an experimental specification and is undergoing regular
+        revisions. It is not fit for production deployment.
+      </p>
+
+      <p>
+        Please
+        <a
+          href="https://github.com/transmute-industries/authorization-credentials/issues/"
+          >open an issue</a
+        >
+        , if you wish to collaborate on this specification.
+      </p>
+
+      <p>
+        You may also reach out via the mailing list:
+        <a href="mailto:public-credentials@w3.org">public-credentials@w3.org</a>
+        (<a href="mailto:public-credentials-request@w3.org?subject=subscribe"
+          >subscribe</a
+        >,
+        <a href="https://lists.w3.org/Archives/Public/public-credentials/"
+          >archives</a
+        >)
+      </p>
+    </section>
+
+    <section class="informative">
+      <h2>Introduction</h2>
+
+      <p>
+        This specification describes an application of [[vc-data-model]] for the
+        purpose of granting, invoking and verifying authorization capabilities.
+      </p>
+    </section>
+
+    <section class="informative">
+      <h2>Requesting Access</h2>
+      <p class="issue">Define relationship to GNAP / CHAPI.</p>
+    </section>
+
+    <section class="informative">
+      <h2>Granting Access</h2>
+      <p>
+        An authorization capability is created by issuing an
+        <code>AuthorizationCapability</code> verifiable credential to a subject.
+      </p>
+      <pre class="example">
+        {
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "https://www.w3.org/2018/credentials/v2"
+            ],
+            "id": "http://example.com/zcaps/0",
+            "type": [
+              "VerifiableCredential",
+              "AuthorizationCapability"
+            ],
+            "issuer": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
+            "issuanceDate": "2020-03-10T04:24:12.164Z",
+            "name": "Manage Vault Documents",
+            "description": "This capability grants a subject the ability to manage documents in a confidential datastore.",
+            "credentialSubject": {
+              "id": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
+              "authorization": [
+                {
+                  "type": "https://w3id.org/security#capabilityInvocation",
+                  "locations": [
+                    "https://example.com/edvs/123"
+                  ],
+                  "actions": [
+                    "https://w3id.org/security#vault.document.create",
+                    "https://w3id.org/security#vault.document.read",
+                    "https://w3id.org/security#vault.document.update",
+                    "https://w3id.org/security#vault.document.delete"
+                  ]
+                }
+              ]
+            },
+            "proof": {
+              "type": "JsonWebSignature2020",
+              "created": "2020-03-10T04:24:12.164Z",
+              "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..cjhgRppuFL8QePkFwA4IHWTHGK0lxOfms22rneJ4MiiJXB9U2pCxoW2y6tOsbGaCWyIaTBX1ISg-IdFjD0Ph_TYFk-jlW_MB1eIdpoO2LJ-aTiwgGWw0TO1DYUNd8PVb",
+              "proofPurpose": "capabilityDelegation",
+              "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
+            }
+          }
+      </pre>
+    </section>
+
+    <section class="informative">
+      <h2>Delegating Access</h2>
+      <p>
+        An authorization capability is delegated by issuing an
+        <code>AuthorizationCapability</code> verifiable credential.
+      </p>
+      <pre class="example">
+        {
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "https://www.w3.org/2018/credentials/v2"
+            ],
+            "id": "http://example.com/zcaps/1",
+            "type": [
+              "VerifiableCredential",
+              "AuthorizationCapability"
+            ],
+            "issuer": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
+            "issuanceDate": "2020-03-10T04:24:12.164Z",
+            "name": "Read Vault Documents",
+            "description": "This capability grants a subject the ability to read documents in a confidential datastore.",
+            "credentialSubject": [
+              {
+                "id": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39",
+                "authorization": [
+                  {
+                    "capability": "http://example.com/zcaps/0",
+                    "caveat": [
+                      {
+                        "actions": [
+                          "https://w3id.org/security#vault.document.create"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "did:key:zACHe1V5EMhFZ9EsvPboK7ySLBLJuUNW53vvDNe3iMhH25iYZvXpVm6Hm7rpnr7dkduDh6iRXhNUNwhdD9SX9NsPK4UpHBTdbyZ5djv965ZS6WXfVDPwwAcc2sYGt2YKFpwdsGWs",
+                "authorization": [
+                  {
+                    "capability": "http://example.com/zcaps/0",
+                    "caveat": [
+                      {
+                        "actions": [
+                          "https://w3id.org/security#vault.document.read"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "proof": {
+              "type": "JsonWebSignature2020",
+              "created": "2020-03-10T04:24:12.164Z",
+              "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..cR3CBD3XXapPXlYRnrjY7jM2ulfWyi9ZZmctJ0tKPbQNJPm8IuDoPnLrIA5CEg_10bKsJgbaKqTR5kUMXgGR_Fv6G3NhROXCscTSs4QnQEMsviJD_lTOIVEWeae9HEu0",
+              "proofPurpose": "capabilityDelegation",
+              "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
+            }
+          }
+      </pre>
+    </section>
+
+    <section class="informative">
+      <h2>Invoking Access</h2>
+      <p>
+        An authorization capability is invoked by presenting an
+        <code>AuthorizationCapabilityInvocation</code> verifiable presentation.
+      </p>
+
+      <pre id="code-example-3" class="example">
+        {
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "https://www.w3.org/2018/credentials/v2"
+            ],
+            "type": [
+              "VerifiablePresentation",
+              "AuthorizationCapabilityInvocation"
+            ],
+            "verifiableCredential": [
+              {
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "https://www.w3.org/2018/credentials/v2"
+                ],
+                "id": "http://example.com/zcaps/1",
+                "type": [
+                  "VerifiableCredential",
+                  "AuthorizationCapability"
+                ],
+                "issuer": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
+                "issuanceDate": "2020-03-10T04:24:12.164Z",
+                "name": "Read Vault Documents",
+                "description": "This capability grants a subject the ability to read documents in a confidential datastore.",
+                "credentialSubject": [
+                  {
+                    "id": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39",
+                    "authorization": [
+                      {
+                        "capability": "http://example.com/zcaps/0",
+                        "caveat": [
+                          {
+                            "actions": [
+                              "https://w3id.org/security#vault.document.create"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "did:key:zACHe1V5EMhFZ9EsvPboK7ySLBLJuUNW53vvDNe3iMhH25iYZvXpVm6Hm7rpnr7dkduDh6iRXhNUNwhdD9SX9NsPK4UpHBTdbyZ5djv965ZS6WXfVDPwwAcc2sYGt2YKFpwdsGWs",
+                    "authorization": [
+                      {
+                        "capability": "http://example.com/zcaps/0",
+                        "caveat": [
+                          {
+                            "actions": [
+                              "https://w3id.org/security#vault.document.read"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "proof": {
+                  "type": "JsonWebSignature2020",
+                  "created": "2020-03-10T04:24:12.164Z",
+                  "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..cR3CBD3XXapPXlYRnrjY7jM2ulfWyi9ZZmctJ0tKPbQNJPm8IuDoPnLrIA5CEg_10bKsJgbaKqTR5kUMXgGR_Fv6G3NhROXCscTSs4QnQEMsviJD_lTOIVEWeae9HEu0",
+                  "proofPurpose": "capabilityDelegation",
+                  "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
+                }
+              }
+            ],
+            "holder": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39#zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39",
+            "proof": {
+              "type": "JsonWebSignature2020",
+              "created": "2020-03-10T04:24:12.164Z",
+              "challenge": "123",
+              "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..OoFQqXA9yoQDaCiiDHma9e8WVnmiggxIfAICa0wxDtiMMXYIbWRXMOP50C_Sg-faVrITefXBv16Bxima-5smuHNwgCX_9LofLOj3QRCDYsZwNavp77m8Yjj8zkSMeif-",
+              "proofPurpose": "capabilityInvocation",
+              "verificationMethod": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39#zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39"
+            }
+          }
+      </pre>
+    </section>
+
+    <section class="informative">
+      <h2>Privacy Considerations</h2>
+
+      <p>
+        This section details the general privacy considerations and specific
+        privacy implications of deploying this specification into production
+        environments.
+      </p>
+    </section>
+
+    <section class="informative">
+      <h2>Security Considerations</h2>
+
+      <p>
+        There are a number of security considerations that implementers should
+        be aware of when processing data described by this specification.
+        Ignoring or not understanding the implications of this section can
+        result in security vulnerabilities.
+      </p>
+
+      <p>
+        While this section attempts to highlight a broad set of security
+        considerations, it is not a complete list. Implementers are urged to
+        seek the advice of security and cryptography professionals when
+        implementing mission critical systems using the technology outlined in
+        this specification.
+      </p>
+    </section>
+
+    <section class="informative">
+      <h2>Accessibility Considerations</h2>
+
+      <p>
+        There are a number of accessibility considerations implementers should
+        be aware of when processing data described in this specification. As
+        with any web standards or protocols implementation, ignoring
+        accessibility issues makes this information unusable to a large subset
+        of the population. It is important to follow accessibility guidelines
+        and standards, such as [[WCAG21]], to ensure all people, regardless of
+        ability, can make use of this data. This is especially important when
+        establishing systems utilizing cryptography, which have historically
+        created problems for assistive technologies.
+      </p>
+
+      <p>
+        This section details the general accessibility considerations to take
+        into account when utilizing this data model.
+      </p>
+    </section>
+
+    <section class="informative">
+      <h2>Internationalization Considerations</h2>
+
+      <p>
+        There are a number of internationalization considerations implementers
+        should be aware of when publishing data described in this specification.
+        As with any web standards or protocols implementation, ignoring
+        internationalization makes it difficult for data to be produced and
+        consumed across a disparate set of languages and societies, which would
+        limit the applicability of the specification and significantly diminish
+        its value as a standard.
+      </p>
+
+      <p>
+        This section outlines general internationalization considerations to
+        take into account when utilizing this data model.
+      </p>
+    </section>
+  </body>
+</html>
