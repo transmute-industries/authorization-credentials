@@ -32,7 +32,7 @@
   "proof": {
     "type": "JsonWebSignature2020",
     "created": "2020-03-10T04:24:12.164Z",
-    "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..cjhgRppuFL8QePkFwA4IHWTHGK0lxOfms22rneJ4MiiJXB9U2pCxoW2y6tOsbGaCWyIaTBX1ISg-IdFjD0Ph_TYFk-jlW_MB1eIdpoO2LJ-aTiwgGWw0TO1DYUNd8PVb",
+    "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..1lEAxAQrz02W5oNMVoAXDxR9CAsUtSr1FzYtoPovit6Ai4_3SyM-tvczQxPRJpCIuoZQuiISJIQXaTo9N3luX9Ke4m8OH2OMQzImTHrBAHNsGcPVvslZnl8_6o4VSH9E",
     "proofPurpose": "assertionMethod",
     "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
   }
