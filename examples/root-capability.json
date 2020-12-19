@@ -5,8 +5,7 @@
   ],
   "id": "http://example.com/zcaps/0",
   "type": [
-    "VerifiableCredential",
-    "AuthorizationCapability"
+    "VerifiableCredential"
   ],
   "issuer": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
   "issuanceDate": "2020-03-10T04:24:12.164Z",
@@ -14,6 +13,7 @@
   "description": "This capability grants a subject the ability to manage documents in a confidential datastore.",
   "credentialSubject": {
     "id": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
+    "type": "AuthorizationCapability",
     "authorization": [
       {
         "type": "https://w3id.org/security#capabilityInvocation",
@@ -31,8 +31,8 @@
   },
   "proof": {
     "type": "JsonWebSignature2020",
-    "created": "2020-03-10T04:24:12.164Z",
-    "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..1lEAxAQrz02W5oNMVoAXDxR9CAsUtSr1FzYtoPovit6Ai4_3SyM-tvczQxPRJpCIuoZQuiISJIQXaTo9N3luX9Ke4m8OH2OMQzImTHrBAHNsGcPVvslZnl8_6o4VSH9E",
+    "created": "2020-12-19T22:02:43.521Z",
+    "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..ij41tt92XHl_USxr_ICLODJDFAr9-PhWjdP-nj8g1hXyJ-tCH4joR8nAeKQsFZWZXZhiUAakzxGVILjkHc_Xihm1DuQ3fLgxBl8RbkqXodLRjx6qzP3UQsghkk0Pts6n",
     "proofPurpose": "assertionMethod",
     "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
   }

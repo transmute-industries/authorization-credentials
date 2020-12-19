@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/v2"
+  ],
+  "id": "http://example.com/zcaps/0",
+  "type": ["VerifiableCredential"],
+  "issuer": "did:example:123",
+  "issuanceDate": "2020-03-10T04:24:12.164Z",
+  "name": "Manage Vault Documents",
+  "description": "This capability grants a subject the ability to manage documents in a confidential datastore.",
+  "credentialSubject": {
+    "id": "did:example:456",
+    "type": "AuthorizationCapability",
+    "authorization": [
+      {
+        "type": "https://w3id.org/security#capabilityInvocation",
+        "locations": ["https://example.com/edvs/123"],
+        "actions": [
+          "https://w3id.org/security#vault.document.create",
+          "https://w3id.org/security#vault.document.read",
+          "https://w3id.org/security#vault.document.update",
+          "https://w3id.org/security#vault.document.delete"
+        ]
+      }
+    ]
+  }
+}
