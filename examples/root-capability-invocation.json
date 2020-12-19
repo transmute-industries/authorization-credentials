@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/v2"
+  ],
+  "type": [
+    "VerifiablePresentation",
+    "AuthorizationCapabilityInvocation"
+  ],
+  "verifiableCredential": [
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://www.w3.org/2018/credentials/v2"
+      ],
+      "id": "http://example.com/zcaps/0",
+      "type": [
+        "VerifiableCredential"
+      ],
+      "issuer": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
+      "issuanceDate": "2020-03-10T04:24:12.164Z",
+      "name": "Manage Vault Documents",
+      "description": "This capability grants a subject the ability to manage documents in a confidential datastore.",
+      "credentialSubject": {
+        "id": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
+        "type": "AuthorizationCapability",
+        "authorization": [
+          {
+            "type": "https://w3id.org/security#capabilityInvocation",
+            "locations": [
+              "https://example.com/edvs/123"
+            ],
+            "actions": [
+              "https://w3id.org/security#vault.document.create",
+              "https://w3id.org/security#vault.document.read",
+              "https://w3id.org/security#vault.document.update",
+              "https://w3id.org/security#vault.document.delete"
+            ]
+          }
+        ]
+      },
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2020-12-19T21:41:38.509Z",
+        "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..yNPTwYhTSOw6nb145__4cQ0-NBd-DpUC6WvZedfPHo4_dei6gGhKuk3N26XqeObWoc2e1DxbNSUL4RR1p4urgiiLuJScbcQR94EOwSYN0pfScAFlKVMRFSRK8HVwyYzR",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
+      }
+    }
+  ],
+  "holder": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "created": "2020-12-19T21:41:38.637Z",
+    "challenge": "123",
+    "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..c144Q6fP7auHYQbNicHucH6eC23jgsbJvPmXlHX0aQwZzvvTlccQ54VHOgGe_YqO2rC5yDHLHOykWSjLlPC9dqFuqBr1lcIuKNGOFA4DPDviXgPN1xZteeTxmsM90shs",
+    "proofPurpose": "authentication",
+    "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
+  }
+}

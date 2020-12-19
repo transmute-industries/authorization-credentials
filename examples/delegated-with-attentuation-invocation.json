@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/v2"
+  ],
+  "type": [
+    "VerifiablePresentation",
+    "AuthorizationCapabilityInvocation"
+  ],
+  "verifiableCredential": [
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://www.w3.org/2018/credentials/v2"
+      ],
+      "id": "http://example.com/zcaps/1",
+      "type": [
+        "VerifiableCredential"
+      ],
+      "issuer": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
+      "issuanceDate": "2020-03-10T04:24:12.164Z",
+      "name": "Read Vault Documents",
+      "description": "This capability grants a subject the ability to read documents in a confidential datastore.",
+      "credentialSubject": {
+        "id": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39",
+        "type": "AuthorizationCapability",
+        "authorization": [
+          {
+            "capability": "http://example.com/zcaps/0",
+            "caveat": [
+              {
+                "actions": [
+                  "https://w3id.org/security#vault.document.read"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2020-12-19T21:41:38.504Z",
+        "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..Fkny3o7-y3Spz9u08oS3n5LjTiwgC5zJEO9GyrN1LhIJkz53mIe6d9nHffgFbhwuCdljmhUGcQgjbyGfYw_SXSrNe7D30XISV4uL7nqFRBOmBT6yOOjOSCR826PeZCHq",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
+      }
+    }
+  ],
+  "holder": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39",
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "created": "2020-12-19T21:41:38.603Z",
+    "challenge": "123",
+    "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..mid9DGkyd12oLdcAiHA1GU5z2p8YA24jKW2HRCPj6jpBZ0OShmG-6OPlyoye_hd3ey4w_vsqBqLcLp5kVrs4OX8jCme6P0m7dTbWs04hfdE4Y2fKduy3ENQ0RG8fvRHO",
+    "proofPurpose": "authentication",
+    "verificationMethod": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39#zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39"
+  }
+}
