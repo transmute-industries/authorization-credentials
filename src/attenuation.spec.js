@@ -19,7 +19,6 @@ let suite;
 
 let k0;
 let k1;
-let k2;
 
 beforeAll(async () => {
   k0 = await JsonWebKey.from(require("../keys/k0.json"));

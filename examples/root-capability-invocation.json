@@ -41,8 +41,8 @@
       },
       "proof": {
         "type": "JsonWebSignature2020",
-        "created": "2020-12-19T21:41:38.509Z",
-        "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..yNPTwYhTSOw6nb145__4cQ0-NBd-DpUC6WvZedfPHo4_dei6gGhKuk3N26XqeObWoc2e1DxbNSUL4RR1p4urgiiLuJScbcQR94EOwSYN0pfScAFlKVMRFSRK8HVwyYzR",
+        "created": "2020-12-19T22:02:43.521Z",
+        "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..ij41tt92XHl_USxr_ICLODJDFAr9-PhWjdP-nj8g1hXyJ-tCH4joR8nAeKQsFZWZXZhiUAakzxGVILjkHc_Xihm1DuQ3fLgxBl8RbkqXodLRjx6qzP3UQsghkk0Pts6n",
         "proofPurpose": "assertionMethod",
         "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
       }
@@ -51,9 +51,9 @@
   "holder": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV",
   "proof": {
     "type": "JsonWebSignature2020",
-    "created": "2020-12-19T21:41:38.637Z",
+    "created": "2020-12-19T22:02:43.672Z",
     "challenge": "123",
-    "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..c144Q6fP7auHYQbNicHucH6eC23jgsbJvPmXlHX0aQwZzvvTlccQ54VHOgGe_YqO2rC5yDHLHOykWSjLlPC9dqFuqBr1lcIuKNGOFA4DPDviXgPN1xZteeTxmsM90shs",
+    "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..2I1bUBK_JDjbV-1AkUlC_cq7EWdMl7Pw9veNKkxjnLPjfNj8WnkZsi9SApQojJ4ndGKcYNxdAjsZ4UBXb63QUVImzNs-Iqw2r6T0WuZb2m4r3DlIKA_8Pj9r_w0e6Yiy",
     "proofPurpose": "authentication",
     "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
   }

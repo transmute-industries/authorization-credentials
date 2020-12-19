@@ -39,8 +39,8 @@
       },
       "proof": {
         "type": "JsonWebSignature2020",
-        "created": "2020-12-19T21:41:38.504Z",
-        "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..Fkny3o7-y3Spz9u08oS3n5LjTiwgC5zJEO9GyrN1LhIJkz53mIe6d9nHffgFbhwuCdljmhUGcQgjbyGfYw_SXSrNe7D30XISV4uL7nqFRBOmBT6yOOjOSCR826PeZCHq",
+        "created": "2020-12-19T22:14:33.784Z",
+        "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..qS5Xg8I2ktyVMmgE8V5pLbnQPpK13n0XwSyF6FERKfIpn9CylWpKyy-vh123Gg8YI31GzFMHkD2AUgd1ZdQGHRIPTvztw3VAx4T6_SOyH_wPKI2f3SiDXGlSejwhXvEy",
         "proofPurpose": "assertionMethod",
         "verificationMethod": "did:key:zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV#zACHcxDJnZZXpzEs2fMkCctJPmgccBHM9rCQVQrkRS5Dkesdz94Xj7EEKs8vJ95prX76ZhFcT73jiYf4r7ynZZciLgAgkfMVUpsZC2Sykdt7GLv3WFbMopmgiJJQEami568r5iBV"
       }
@@ -49,9 +49,9 @@
   "holder": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39",
   "proof": {
     "type": "JsonWebSignature2020",
-    "created": "2020-12-19T21:41:38.603Z",
+    "created": "2020-12-19T22:14:33.893Z",
     "challenge": "123",
-    "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..mid9DGkyd12oLdcAiHA1GU5z2p8YA24jKW2HRCPj6jpBZ0OShmG-6OPlyoye_hd3ey4w_vsqBqLcLp5kVrs4OX8jCme6P0m7dTbWs04hfdE4Y2fKduy3ENQ0RG8fvRHO",
+    "jws": "eyJhbGciOiJFUzM4NCIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..wB7OKxgt5FW1opChzemnm0YfL7S3B97VdsHrn1ohLSi6er1Fo8-nBzeyORCgEc2BWpo-bKJ1kTa5SMGtA9RRMCAKKG1pejOHMMuomDjTTggBbI3DBpS45LX2sxVpLJV7",
     "proofPurpose": "authentication",
     "verificationMethod": "did:key:zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39#zACHdHPDvB6e4as9JB7xNnTydJyhUTNv4qFGfUj8mGRY3ezJh21927ZhNDw47KqeRMjNNFwGGU8uac7QoTmDBXPcXWRXW9J5MWLJxc9GwshoC6CT6ekEX6phS319LVuvPWY4mc39"
   }

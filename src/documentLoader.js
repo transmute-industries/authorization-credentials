@@ -26,6 +26,16 @@ golem.addResolver({
       return didDocument;
     },
   },
+  "http://example.com/zcaps/0": {
+    resolve: async (uri) => {
+      return require("../examples/root-capability.json");
+    },
+  },
+  "http://example.com/zcaps/1": {
+    resolve: async (uri) => {
+      return require("../examples/delegated-with-attentuation-capability.json");
+    },
+  },
 });
 
 const documentLoader = golem.buildDocumentLoader();
