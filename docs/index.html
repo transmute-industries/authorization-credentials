@@ -57,6 +57,23 @@
             status: "CGDRAFT",
             publisher: "JSON-LD Community Group",
           },
+          "ZCAP-LD": {
+            title: "Authorization Capabilities for Linked Data v0.3",
+            href: "https://w3c-ccg.github.io/zcap-ld/",
+            authors: [
+              "Christopher Lemmer Webber",
+              "Manu Sporny",
+              "Mark S. Miller",
+            ],
+            status: "CGDRAFT",
+          },
+          GNAP: {
+            title: "Grant Negotiation and Authorization Protocol",
+            href:
+              "https://www.ietf.org/archive/id/draft-ietf-gnap-core-protocol-02.txt",
+            authors: ["J. Richer", "A. Parecki", "F. Imbault"],
+            status: "Internet-Draft",
+          },
         },
       };
     </script>
@@ -106,9 +123,18 @@
       <h2>Introduction</h2>
 
       <p>
+        Authorization mechanisms are a threat to innovation and maintainability
+        of secure software systems. Traditional mechanisms for defining,
+        requesting and granting authorization are brittle, outdated, and lack
+        the semanic expressiveness to account for the scope and scale of modern
+        software applications.
+      </p>
+
+      <p>
         This specification describes an application of [[vc-data-model]] for the
         purpose of granting, invoking and verifying authorization capabilities.
       </p>
+      <p>This work is inspired by [[ZCAP-LD]], [[GNAP]] and the challenges.</p>
     </section>
 
     <section class="normative">
