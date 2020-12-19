@@ -324,6 +324,53 @@
       </section>
     </section>
 
+    <section>
+      <h2>Verification</h2>
+      <p>
+        Verification of capabilities and invocations mirrors the process of
+        verifiying credentials and presentations, but with some notable
+        exceptions, to support delegation and revocation.
+      </p>
+
+      <p>
+        In order to verify a capability invocation, both the inovcation and the
+        associated capability chain must be verified, similar to how a
+        verifiable presentation is only verified when the credentials and the
+        presentation have been verified.
+      </p>
+
+      <section>
+        <h2>Capability Chain</h2>
+        <p>
+          In order to verify a capability, a verifier must traverse backwards
+          from a leaf capability to a root capability.
+        </p>
+        <p>Each capability can be embedded by value or by reference (uri).</p>
+        <p>
+          If any capability is not resolvable, or if verification fails, the
+          capability chain verification process must exit immediatly, and the
+          chain MUST be considerd to have failed verification.
+        </p>
+      </section>
+
+      <section>
+        <h2>Capability Invocation</h2>
+        <p>
+          In order to verify a capability invocation, the associated capability
+          chain must be verified as a series of linked verifiable credentials.
+        </p>
+        <p>
+          After the capability chain has been verified, the capability
+          invocation MUST be verified, as a verifiable presentation.
+        </p>
+        <p>
+          If either the capability chain or the capability invocation
+          verification fails, the invocation MUST be considerd to have failed
+          verification.
+        </p>
+      </section>
+    </section>
+
     <section class="informative">
       <h2>Privacy Considerations</h2>
 
